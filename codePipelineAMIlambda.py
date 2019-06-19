@@ -2,7 +2,6 @@ from __future__ import print_function
  
 import json
 import datetime
-import time
 import boto3
 import datetime
 import pprint
