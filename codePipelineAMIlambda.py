@@ -31,7 +31,7 @@ def lambda_handler(event, context):
 
     CreateLaunchConfiguration(autoScalingClient,getSourceInstanceId(autoScalingClient,targetAsgName),targetAsgName,newLaunchConfigName, image_Id)
     
-
+    # success notification to codepipeline else lambda will execute infinitely.
     response = code_pipeline.put_job_success_result(
         jobId=event['CodePipeline.job']['id']
     )
